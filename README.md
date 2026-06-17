@@ -3,7 +3,7 @@ Scripts for automated digitalization of hand-drawn micro-sections – from prepr
 
 # Description
 
-This repository provides a four-step, reproducible pipeline for converting hand-drawn field micro-section drawings into GIS-ready vector layers. The workflow was developed in collaboration with the Institute of Archaeology, Czech Academy of Sciences, to accelerate the digitalization of a large number of section drawings produced during test probing. The pipeline covers image preprocessing, rectification, vectorization, and layer annotation. It is implemented in Python (3.10+; recommended 3.12) and Jupyter Notebooks.
+This repository provides a four-step, reproducible pipeline for converting hand-drawn field micro-section drawings into GIS-ready vector layers. The workflow was developed in collaboration with the Institute of Archaeology, Czech Academy of Sciences, to accelerate the digitalization of a large number of section drawings produced during test probing. The pipeline covers image preprocessing, rectification, vectorization, and layer annotation. It is implemented in Python (3.12) and Jupyter Notebooks.
 
 ## Recommended execution order: Script1 → Script2 → Script3 → Script4
 
@@ -17,7 +17,7 @@ Script2_AutoRectifier.ipynb – rectifies/aligns the input image using a referen
 
 Script3_Autovectorizer.ipynb – detects and vectorizes layer boundaries; uses a scale template for robust scale detection via template matching.
 
-Script4_LayerAnnotator.ipynb – adds attributes/labels to vectorized layers and prepares exports (Shapefile).
+Script4_LayerAnnotator.ipynb – adds attributes/labels to vectorized layers and generates bounding boxes based on the retained annotated polygon geometries.
 
 
 ## Assets
@@ -26,19 +26,18 @@ SCALE.shp (+ sidecars like .dbf, .shx, etc.) — reference geometry for Script2 
 
 template.scale.jpg — scale template for Script3 (template matching of the scale on the form).
 
-Sampleform.jpg — example input form you can use to verify the pipeline end-to-end.
+Sampleform1-5.jpg — five example input forms you can use to verify the pipeline end-to-end.
 
 
 # Requirements
 
-Python 3.10+ (recommended 3.11)
+Python 3.12
 
 Jupyter / JupyterLab
 
 # Python packages (see requirements.txt):
 
-affine, geopandas, numpy, opencv-python, pandas, 
-pytesseract, pillow, matplotlib, rasterio, shapely
+affine, geopandas, numpy, opencv-python, pandas, matplotlib, rasterio, shapely
 
 # Quick start
 
