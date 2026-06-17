@@ -81,4 +81,4 @@ If you use any part of this workflow or code, please cite the repository:
 
 APA (software / repository):
 
-Hájek, F. (2025). Automated digitalization of hand-drawn micro-section profiles. GitHub repository. DOI: 10.5281/zenodo.17490010
+Filip Hájek. (2026). CSTAAR/Automated_micro-section_drawing_digitalization: Updated semi-automated micro-section processing workflow (v2.0.0). Zenodo. https://doi.org/10.5281/zenodo.20732312
